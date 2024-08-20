@@ -331,7 +331,7 @@ require('lazy').setup({
   -- Use the `dependencies` key to specify the dependencies of a particular plugin
   {
     'github/copilot.vim',
- },
+  },
   { -- Fuzzy Finder (files, lsp, etc)
     'nvim-telescope/telescope.nvim',
     event = 'VimEnter',
@@ -721,7 +721,8 @@ require('lazy').setup({
       end,
       formatters_by_ft = {
         lua = { 'stylua' },
-        python = { 'isort', 'black' },
+        python = { 'ruff_format', 'ruff_organize_imports' },
+        -- python = { 'isort', 'black' },
         markdown = { 'inject' },
         -- Conform can also run multiple formatters sequentially
         -- python = { "isort", "black" },
